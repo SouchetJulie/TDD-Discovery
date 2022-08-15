@@ -22,8 +22,9 @@ If you're running a Windows version prior to Windows 10, please upgrade to Windo
 
 - Go to [Microsoft's](https://www.microsoft.com/software-download/windows10ISO) webiste and download Windows 10.
 - Then... install it. :no_mouth:
-:warning: This might take a while. If so, team up with your *codemate* and go ahead using both his/her computer.
-- One you're done, you can resume the process. :point_down:
+
+  :warning: This might take a while. If so, team up with your *codemate* and go ahead using both his/her computer.
+- Once you're done, you can resume the process. :point_down:
 
 ### Windows 10
 If you're on Windows 10, you need to upgrade to Windows 11 (remember? We need the **latest** version).
@@ -31,9 +32,10 @@ If you're on Windows 10, you need to upgrade to Windows 11 (remember? We need th
 - Select the *Start* Button
 - Then go to **Settings** > **Update & Security** > **Windows Update**
 - Install the update
-:warning: This might take a while. If so, team up with your *codemate* and go ahead using both his/her computer.
+:warning: This might take a while. If so, team up with your *codemate* and go ahead, both using his/her computer.
 
 :bulb: If no available update is showing, you're computer might not be available to the update. We'll try make do without it.
+
 *Disclaimer: you're gonna have a hard time. Let's jump in for the ride.* :sunglasses:
 
 ### Windows 11
@@ -48,26 +50,14 @@ Finally, we need to make sure the lastest updates are installed on your computer
 - Press `Enter`
 - Click on `Check updates`
 
-
-
-Once you're sure that you're using Windows 10 or 11, you need to install all the latest updates.
-
-Open Windows Update:
-- Press `Windows` + `R`
-- Type  `ms-settings:windowsupdate`
-- Press `Enter`
-- Click on `Check updates`
-
  :white_check_mark: If you see a green check mark and the message *"You're up to date"*, then... you're up to date. :ok_hand:
 
 :heavy_exclamation_mark: If you have a red exclamation mark and the message *"Update available"*, you need to install these updates. Once installed, repeat the process to make sure there ar no new updates (Windows likes to magically bring up new updates after the prior one).
 
-:x: If you have an error message about Windows not being able to apply updates, please **contact a teacher**.
-
 <details>
-  <summary>If you have an error message...</summary>
+  <summary>:rotating_light: If you have an error message...</summary>
 
-  We're going to activate *Windows Update Service* to fix updates. Some antiviruses and wosftware interfere (i.e. deactivate) it. Uncle Donatien is here to help you bring it back up.
+  We're going to activate *Windows Update Service* to fix updates. Some antiviruses and softwares interfere (i.e. deactivate) it. Uncle Donatien is here to help you bring it back up.
   - Press `Windows` + `R`
   - Type  `services.msc`
   - Press `Enter`
@@ -298,10 +288,10 @@ wsl -l -v
 You can now close this terminal window. :wave:
 
 ## Code Editor
-If you have a favorite code editor that you are accostumated to used, perfect. You just need to make sure it's connected to Ubuntu. You are probably going to go through the documentation for that.
+If you have a favorite code editor that you are accustomed to use, perfect. You just need to make sure it's connected to Ubuntu. You are probably going to go through the documentation for that.
 You can Google `Connect [your code editor name] to Ubuntu on Windows` to find some helpful links.
 
-If you don't, no worries : we'll install **[Visual Studio Code](https://code.visualstudio.com)**.
+If you don't have a favorite code editor, no worries : you'll make good friend with **[Visual Studio Code](https://code.visualstudio.com)**.
 
 ### Installation
 
@@ -332,11 +322,13 @@ To make VS Code interact properly with Ubuntu, let's install the [Remote - WSL](
 
 ## Windows Terminal
 
-### Installation
-
 :warning: The following instructions depend on your version of Windows.
 
+### Windows 11
+
 If you are running Windows 11, the Windows Terminal is already installed and you can proceed to the next section. We definitely love Windows 11. :blue_heart:
+
+### Windows 10
 
 If you are running Windows 10, you need to install Windows Terminal, a real modern terminal:
 
@@ -402,7 +394,7 @@ Now, you need to [tweak wome settings](https://github.com/lewagon/setup/raw/mast
 
 ## VS Code Extensions
 
-The great thing with VS Code is that you can install plenty of extensions to supercharge your code editor. Here are some useful VS Code extension.
+The great thing with VS Code is that you can install plenty of extensions to supercharge your code editor. Here are some useful VS Code extensions.
 
 - [VSCode Great Icons](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons)
 - [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
@@ -441,7 +433,7 @@ Let's install them, along with other useful tools:
 
 These commands will ask for your password: type it in.
 
-:no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
+> :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
 
 ### GitHub CLI installation
 
@@ -505,15 +497,15 @@ From the previous commands, GitHub CLI should already be installed on your compu
     `gh` will ask you few questions:
 
     - `What is your preferred protocol for Git operations?`
-    With the arrows, choose `SSH` and press `Enter`. SSH is a protocol to log in using SSH keys instead of the well known username/password pair.
+      With the arrows, choose `SSH` and press `Enter`. SSH is a protocol to log in using SSH keys instead of the well known username/password pair.
 
     - `Generate a new SSH key to add to your GitHub account?` Press `Enter` to ask `gh` to generate the SSH keys for you.
 
-    If you already have SSH keys, you will see instead `Upload your SSH public key to your GitHub account?` With the arrows, select your public key file path and press `Enter`.
+      If you already have SSH keys, you will see instead `Upload your SSH public key to your GitHub account?` With the arrows, select your public key file path and press `Enter`.
 
     - `Enter a passphrase for your new SSH key (Optional)`. Type something you want and that you'll remember. It's a password to protect your private key stored on your hard drive. Then press `Enter`.
 
-    > :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
+      > :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
 
 - You will then get the following output:
 
@@ -522,7 +514,7 @@ From the previous commands, GitHub CLI should already be installed on your compu
     - Press Enter to open github.com in your browser...
     ```
 
-    - Select and copy the code (`0EF9-D015` in the example), then press `Enter`.
+- Select and copy the code (`0EF9-D015` in the example), then press `Enter`.
 
     Your browser will open and ask you to authorize GitHub CLI to use your GitHub account. Accept and wait a bit.
 
@@ -540,7 +532,7 @@ From the previous commands, GitHub CLI should already be installed on your compu
 
 ## Standard configuration
 
-In order to have a file configuration identical for everyone, we'll use a template. More specifiaclly, the [Dotfiles](https://github.com/lewagon/dotfiles) template from Le Wagon. Thus, you will fork Le Wagon repository.
+In order to have a file configuration identical for everyone, we'll use a template. More specifically, the [Dotfiles](https://github.com/lewagon/dotfiles) template from Le Wagon. Thus, you will fork Le Wagon repository.
 
 <details>
   <summary>Forking? What's that, I'm not hungry.</summary>
@@ -562,7 +554,7 @@ echo $GITHUB_USERNAME
 :rotating_light: If not, **stop here**. There may be a problem with the previous step (`gh auth`). Try to redo it.
 
 
-Now, it's time to fork the repo and clone it on your computer:
+**Now, it's time to fork the repo and clone it on your computer:**
 
 ```bash
 mkdir -p ~/code/$GITHUB_USERNAME && cd $_
@@ -611,7 +603,7 @@ plugins=(gitfast last-working-dir common-aliases zsh-syntax-highlighting history
 
 ## Ruby & rbenv
 
-There we are! We are finally going to install the language we are interested in for this TDD Discovery: **Ruby**.
+There we are! We are finally going to install the language we are interested in for this TDD Discovery: **Ruby**. :heart_eyes:
 
 ### rbenv
 
@@ -671,7 +663,7 @@ Then run:
 ruby -v
 ```
 
-:white_check_mark: If you see something starting with `ruby 3.1.2p` then you can proceed +1:
+:white_check_mark: If you see something starting with `ruby 3.1.2p` then you can proceed. :+1:
 
 
 ### Installing some gems
@@ -684,7 +676,7 @@ In your terminal, copy-paste the following command:
 gem install colored faker http pry-byebug rake rails rest-client rspec rubocop-performance sqlite3
 ```
 
-:white_check_mark: If you get `xx gems installed`, then all good :+1:
+:white_check_mark: If you get `xx gems installed`, it's all good :ok_hand:
 
 :rotating_light: If you encounter the following error:
 
@@ -705,7 +697,7 @@ Rerun the command to install the gems.
 
 ## Make sure everything is OK.
 
-Le Wagon created a cool script that ensures that everylittle thing specified above is correctly installed on your machine. We'll use it as a final check before departure. :rocket:
+Le Wagon created a cool script that ensures that every little piece of software specified above is correctly installed on your machine. We'll use it as a final check before departure. :rocket:
 
 In you terminal, run the following command:
 
