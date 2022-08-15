@@ -1,6 +1,6 @@
-*This setup is inspired by [Le Wagon](https://github.com/lewagon/setup/blob/master/macos.md) setup.*
+*This setup is inspired by [Le Wagon](https://github.com/lewagon/setup/blob/master/ubuntu.md) setup.*
 
-# Setup Instructions for macOS
+# Setup Instructions for Linux
 The content below will guide you through the configuration of your machine, which is needed for the *TDD Discovery*.
 **Please read carefully.**
 
@@ -12,85 +12,6 @@ You will need a GitHub account to go through the TDD Discovery. If you don't alr
 
 :point_right: Make sure your profile looks like it's yours. **[Upload a picture](https://github.com/settings/profile)** and put your name correctly (do it **now**, not later. Selfies are exceptionnaly authorized in class for that particular step :camera:).
 
-## Command Line Tools
-
-Open a new terminal and run following command:
-
-```bash
-xcode-select --install
-```
-
-If you receive the following message, you can just skip this step and go to next step.
-
-```bash
-# command line tools are already installed, use "Software Update" to install updates
-```
-
-Otherwise, it will open a window asking you if you want to install some software: click on "Install" and wait.
-
-
-:white_check_mark: If you see the message "The software was installed" then all good :+1:
-
-:rotating_light: If the command `xcode-select --install` fails, then try again: sometimes, Apple servers are just overloaded.
-
-:rotating_light: If you see the message "Xcode is not currently available from the Software Update server", you need to update the software update catalog:
-
-```bash
-sudo softwareupdate --clear-catalog
-```
-
-Once this is done, you can try to install again. :arrows_counterclockwise:
-
-
-## Homebrew
-
-In order to manage packages, we will need [Homebrew](http://brew.sh/): it's a software used to install other software from the command line.
-
-- Open a terminal and run:
-
-    ```bash
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-
-    This will ask for your confirmation (hit `Enter`) and your **macOS user account password** (the one you use to [log in](https://support.apple.com/en-gb/HT202860) when you reboot your Mac).
-
-    > :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
-
-    :warning: If you see [this warning](https://github.com/lewagon/setup/blob/master/images/macos_homebrew_warning.png), run the two commands in the `Next steps` section to add Homebrew to your PATH:
-
-
-    ```bash
-    # ⚠️ Only execute these commands if you saw this warning ☝
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    ```
-
-    If you already have Homebrew installed, it will tell you so. You can go ahead. :point_down:
-
-- Then install some useful software:
-
-    ```bash
-    brew update
-    ```
-
-    If you get a `/usr/local must be writable` error, just run this:
-
-    ```bash
-    sudo chown -R $USER:admin /usr/local
-    brew update
-    ```
-
-- Proceed running the following in the terminal (you can copy / paste all the lines at once).
-
-    ```bash
-    brew upgrade git || brew install git
-    brew upgrade gh || brew install gh
-    brew upgrade wget || brew install wget
-    brew upgrade imagemagick || brew install imagemagick
-    brew upgrade jq || brew install jq
-    brew upgrade openssl || brew install openssl
-    ```
-
 ## Code Editor
 
 If you have a favorite code editor that you are accostumated to used, perfect. You just need to make sure it's connected to Ubuntu. You are probably going to go through the documentation for that.
@@ -101,12 +22,21 @@ If you don't have a favorite code editor, no worries : you'll make good friend w
 ### Installation
 
 
-We'll install VS Code using Homebrew.
+We'll install VS Code using CLI.
 - In your terminal, run:
 
     ```bash
-    brew install --cask visual-studio-code
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+    sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+    rm -f packages.microsoft.gpg
+    sudo apt update
+    sudo apt install -y code
     ```
+
+    :bulb: You'll be asked to enter your password: type it in.
+
+    > :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
 
 - Then, you can launch VS Code by simply running the following command:
 
@@ -136,13 +66,55 @@ code --install-extension Rubymaniac.vscode-paste-and-indent
 code --install-extension alexcvzz.vscode-sqlite
 ```
 
-## macOS Terminal Theme
+## Command line tools
+*Extract from [Le Wagon](https://github.com/lewagon/setup/blob/master/ubuntu.md) setup*
 
-You can customize the visual theme of your Terminal:
-- Launch a terminal
-- Click on `Terminal > Preferences`
-- In the *Window* tab, set your **Window Size** to Columns: `200` and Rows: `50`.
-- I also higlhy recommend you to set the "Pro" theme as default profile. This will turn the background dark and make it definitely easier for your eyes (take care of them). :eyes:
+### Zsh & Git
+
+Instead of using the default `bash` [shell](https://en.wikipedia.org/wiki/Shell_(computing)), we will use `zsh`.
+
+We will also use [`git`](https://git-scm.com/), a command line software used for version control.
+
+Let's install them, along with other useful tools:
+- Open an **Ubuntu terminal**
+- Copy and paste the following commands:
+
+    ```bash
+    sudo apt update
+    ```
+
+    ```bash
+    sudo apt install -y curl git imagemagick jq unzip vim zsh
+    ```
+
+These commands will ask for your password: type it in.
+
+> :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
+
+### GitHub CLI installation
+
+Now, let's install [GitHub official CLI](https://cli.github.com) (Command Line Interface). We'll use it to interact with your GitHub account via the command line.
+
+In your terminal, copy-paste the following commands (type in your password if asked):
+
+```bash
+sudo apt remove -y gitsome # gh command can conflict with gitsome if already installed
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install -y gh
+```
+
+To check that `gh` has been successfully installed on your machine, you can run:
+
+```bash
+gh --version
+```
+
+:white_check_mark: If you see `gh version X.Y.Z (YYYY-MM-DD)`, you're good to go :+1:
+
+:x: Otherwise, refer to your best buddy: your *codemate*, one of your classmates or simply Google.
+
 
 ## Oh-my-zsh
 
@@ -161,6 +133,7 @@ Let's install the `zsh` plugin [Oh My Zsh](https://ohmyz.sh/).
 
 :rotating_light: Otherwise, refer to your best buddy: your *codemate*, one of your classmates or simply Google.
 
+
 ## GitHub CLI
 
 CLI is the acronym of [Command-line Interface](https://en.wikipedia.org/wiki/Command-line_interface).
@@ -169,7 +142,7 @@ In this section, we will use [GitHub CLI](https://cli.github.com/) to interact w
 
 From the previous commands, GitHub CLI should already be installed on your computer. We'll use it to interact with GitHub directly from the terminal.
 
-- First, in order to **login**, copy-paste the following command in your terminal:
+- First in order to **login**, copy-paste the following command in your terminal:
 
     :warning: **DO NOT edit the `email`**
 
@@ -224,7 +197,6 @@ In order to have a file configuration identical for everyone, we'll use a templa
 
   In our case, forking Le Wagon's Dotfiles template means you'll have a new `$GITHUB_USERNAME/dotfiles` repo on your GitHub account, identical to the original Le Wagon one. We'll use it to run some config.
 </details>
-</details>
 
 
 Open your terminal and run the following commands:
@@ -263,7 +235,28 @@ gh api user/emails | jq -r '.[].email'
 
 :white_check_mark: If you see the list of your registered emails, you can proceed :+1:
 
-:rotating_light: If not, please [reauthenticate to GitHub](https://github.com/lewagon/setup/blob/master/macos.md#github-cli) before running this command :point_up: again.
+:rotating_light: If not, please [reauthenticate to GitHub](https://github.com/lewagon/setup/blob/master/ubuntu.md#github-cli) before running this command :point_up: again.
+
+## Disable SSH passphrase prompt
+
+You don't want to be asked for your passphrase every time you communicate with a distant repository. So, you need to add the plugin `ssh-agent` to `oh my zsh`:
+
+- First, open the `.zshrc` file. If you are using VS Code, run this command:
+
+    ```bash
+    code ~/.zshrc
+    ```
+
+- Spot the line starting with `plugins=`
+- Add `ssh-agent` at the end of the plugins list
+
+The list should look like:
+
+```bash
+plugins=(gitfast last-working-dir common-aliases zsh-syntax-highlighting history-substring-search pyenv ssh-agent)
+```
+
+:white_check_mark: Save the `.zshrc` and close your code editor.
 
 ## Ruby & rbenv
 
@@ -277,26 +270,26 @@ First, you will install [`rbenv`](https://github.com/sstephenson/rbenv), a softw
 
     ```bash
     rvm implode && sudo rm -rf ~/.rvm
-    # If you got "zsh: command not found: rvm", carry on. It means `rvm` is not
-    # on your computer, that's what we want!
-
-    sudo rm -rf $HOME/.rbenv /usr/local/rbenv /opt/rbenv /usr/local/opt/rbenv
+    # If you got "zsh: command not found: rvm", carry on.
+    # It means `rvm` is not on your computer, that's what we want!
+    rm -rf ~/.rbenv
     ```
-
-    :bulb: You may have to type your password.
-
-    > :no_mouth: When you type your password, nothing will show up on the screen, **that's normal**. This is a security feature to mask not only your password as a whole but also its length. Just type your password and when you're done, press `Enter`.
 
 - Then in the terminal, run:
 
     ```bash
-    brew uninstall --force rbenv ruby-build
-    exec zsh
+    sudo apt install -y build-essential tklib zlib1g-dev libssl-dev libffi-dev libxml2 libxml2-dev libxslt1-dev libreadline-dev
     ```
 
     ```bash
-    brew install rbenv
+    git clone https://github.com/rbenv/rbenv.git ~/.rbenv
     ```
+
+    ```bash
+    git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+    exec zsh
+    ```
+
 
 ### Ruby
 

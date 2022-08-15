@@ -1,6 +1,6 @@
 *This setup is inspired by [Le Wagon](https://github.com/lewagon/setup/blob/master/windows.md) setup.*
 
-# Setup Instructions
+# Setup Instructions for Windows
 The content below will guide you through the configuration of your machine, which is needed for the *TDD Discovery*.
 **Please read carefully.**
 
