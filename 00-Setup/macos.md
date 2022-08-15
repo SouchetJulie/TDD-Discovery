@@ -1,6 +1,6 @@
 *This setup is inspired by [Le Wagon](https://github.com/lewagon/setup/blob/master/macos.md) setup.*
 
-# Setup Instructions
+# Setup Instructions for macOS
 The content below will guide you through the configuration of your machine, which is needed for the *TDD Discovery*.
 **Please read carefully.**
 
