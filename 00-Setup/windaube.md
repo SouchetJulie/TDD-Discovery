@@ -475,7 +475,7 @@ Let's install the `zsh` plugin [Oh My Zsh](https://ohmyz.sh/).
 
 :white_check_mark: If it does, you can continue :+1:
 
-:x: Otherwise, refer to your best buddy: your *codemate*, one of your classmates or simply Google.
+:rotating_light: Otherwise, refer to your best buddy: your *codemate*, one of your classmates or simply Google.
 
 
 ## GitHub CLI
@@ -535,10 +535,11 @@ From the previous commands, GitHub CLI should already be installed on your compu
 In order to have a file configuration identical for everyone, we'll use a template. More specifically, the [Dotfiles](https://github.com/lewagon/dotfiles) template from Le Wagon. Thus, you will fork Le Wagon repository.
 
 <details>
-  <summary>Forking? What's that, I'm not hungry.</summary>
+  <summary>Forking? What is that, I'm not hungry.</summary>
 
-  Forking means that you will make a copy of an original repository. This copy will be stored in your wery own GitHub account and you will be able to modify it at will.
-  In our case, forking Le Wagon's Dotfiles template means you'll have a new $GITHUB_USERNAME/dotfiles repo on your GitHub account, identical to the original Le Wagon one. We'll use it to run some config.
+  **Forking means that you will make a copy of an original repository.** This copy will be stored in your wery own GitHub account and you will be able to modify it at will.
+
+  In our case, forking Le Wagon's Dotfiles template means you'll have a new `$GITHUB_USERNAME/dotfiles` repo on your GitHub account, identical to the original Le Wagon one. We'll use it to run some config.
 </details>
 
 
