@@ -96,7 +96,7 @@ In order to manage packages, we will need [Homebrew](http://brew.sh/): it's a so
 If you have a favorite code editor that you are accostumated to used, perfect. You just need to make sure it's connected to Ubuntu. You are probably going to go through the documentation for that.
 You can Google `Connect [your code editor name] to Ubuntu on Windows` to find some helpful links.
 
-If you don't, no worries : we'll install **[Visual Studio Code](https://code.visualstudio.com)**.
+If you don't have a favorite code editor, no worries : you'll make good friend with **[Visual Studio Code](https://code.visualstudio.com)**.
 
 ### Installation
 
@@ -169,7 +169,7 @@ In this section, we will use [GitHub CLI](https://cli.github.com/) to interact w
 
 From the previous commands, GitHub CLI should already be installed on your computer. We'll use it to interact with GitHub directly from the terminal.
 
-- First in order to **login**, copy-paste the following command in your terminal:
+- First, in order to **login**, copy-paste the following command in your terminal:
 
     :warning: **DO NOT edit the `email`**
 
