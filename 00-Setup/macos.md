@@ -1,4 +1,4 @@
-*This setup is inspired by [Le Wagon](https://github.com/lewagon/setup/blob/master/windows.md) setup.*
+*This setup is inspired by [Le Wagon](https://github.com/lewagon/setup/blob/master/macos.md) setup.*
 
 # Setup Instructions
 The content below will guide you through the configuration of your machine, which is needed for the *TDD Discovery*.
@@ -263,7 +263,7 @@ gh api user/emails | jq -r '.[].email'
 
 :white_check_mark: If you see the list of your registered emails, you can proceed :+1:
 
-:rotating_light: If not, please [reauthenticate to GitHub](https://github.com/lewagon/setup/blob/master/windows.md#github-cli) before running this command :point_up: again.
+:rotating_light: If not, please [reauthenticate to GitHub](https://github.com/lewagon/setup/blob/master/macos.md#github-cli) before running this command :point_up: again.
 
 ## Ruby & rbenv
 
