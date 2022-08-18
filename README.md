@@ -15,3 +15,4 @@ This module aims at manipulating the basics of the Ruby language.
 It includes the following exercises :
 
 - Warm greeting
+- Password generator
