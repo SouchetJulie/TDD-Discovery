@@ -16,3 +16,4 @@ It includes the following exercises :
 
 - Warm greeting
 - Password generator
+- Leap year
