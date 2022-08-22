@@ -25,5 +25,6 @@ This module aims at discovring what *Test Driven Develomment* is.
 
 It includes the following exercises :
 
-- Array Splitter
-- Roman Style
+- Array splitter
+- Roman style
+- Hey oh
