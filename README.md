@@ -18,3 +18,15 @@ It includes the following exercises :
 - Password generator
 - Leap year
 - Black Jack
+
+## 02 - Test Druven Development
+
+This module aims at discovring what *Test Driven Develomment* is.
+
+It includes the following exercises :
+
+- Array splitter
+- Roman style
+- Hey oh
+- Black Jack
+
