@@ -1,3 +1,3 @@
-def black_jack
+def game
   # TO DO: Write a (simplified) Black Jack game.
 end
