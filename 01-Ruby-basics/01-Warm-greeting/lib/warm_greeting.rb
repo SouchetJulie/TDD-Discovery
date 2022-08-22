@@ -1,3 +1,10 @@
 def warm_greeting(name, time = Time.now)
-  # TO DO: Write a method that takes your name as an argument and greets you according to the time of the day.
+  case time.hour
+  when 3..11        then period = "morning"
+  when 12..17       then period = "afternoon"
+  when 18..21       then period = "evening"
+  else              period = "night"
+  end
+
+  return "Good #{period}, #{name}"
 end
