@@ -28,3 +28,5 @@ It includes the following exercises :
 - Array splitter
 - Roman style
 - Hey oh
+- Black Jack
+
