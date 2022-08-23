@@ -19,7 +19,7 @@ It includes the following exercises :
 - Leap year
 - Black Jack
 
-## 02 - Test Druven Development
+## 02 - Test Driven Development
 
 This module aims at discovring what *Test Driven Develomment* is.
 
