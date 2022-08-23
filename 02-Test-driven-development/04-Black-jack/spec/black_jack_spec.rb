@@ -1,1 +1,1 @@
-# TO DO: Write specs for you Black Jack game
+# TO DO: Write specs for your Black Jack game

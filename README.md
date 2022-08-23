@@ -19,9 +19,9 @@ It includes the following exercises :
 - Leap year
 - Black Jack
 
-## 02 - Test Druven Development
+## 02 - Test Driven Development
 
-This module aims at discovring what *Test Driven Develomment* is.
+This module aims at discovring what *Test Driven Development* is.
 
 It includes the following exercises :
 
@@ -30,3 +30,13 @@ It includes the following exercises :
 - Hey oh
 - Black Jack
 
+## 02 - Advanced Ruby
+
+This module aims at manipulating more advanced Ruby notions, as well as continuing practicing *TDD*.
+
+It includes the following exercises :
+
+- Black Jack points
+- Manipulate arrays
+- Anagram bundler
+- Reverse Roman style
