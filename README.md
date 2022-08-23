@@ -30,3 +30,13 @@ It includes the following exercises :
 - Hey oh
 - Black Jack
 
+## 02 - Advanced Ruby
+
+This module aims at manipulating more advanced Ruby notion, as well as continue practicing *TDD*.
+
+It includes the following exercises :
+
+- Black Jack points
+- Manipulate arrays
+- Anagram bundler
+- Reverse Roman style
