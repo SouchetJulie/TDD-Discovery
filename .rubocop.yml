@@ -57,7 +57,7 @@ Style/OptionalBooleanParameter:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.1.2
+  TargetRubyVersion: 3.0
   Exclude:
     - '**/Rakefile'
     - '01-Ruby-basics/**/spec/**/*'
