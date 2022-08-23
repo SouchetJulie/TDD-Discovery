@@ -39,3 +39,4 @@ It includes the following exercises :
 - Black Jack points
 - Manipulate arrays
 - Anagram bundler
+- Reverse Roman style
