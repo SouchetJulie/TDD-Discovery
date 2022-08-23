@@ -7,8 +7,10 @@
 # - D = 500
 # - M = 1000
 
-require ('roman_style')
+require ("roman_style")
 
-describe 'roman_style' do
-  it 'converts simple numbers' do
+describe "roman_style" do
+  it "converts simple numbers" do
     expect()
+  end
+end

@@ -1,6 +1,6 @@
-load './dealer.rb'
+load "./dealer.rb"
 
-def game  
+def game
   puts "Welcome to BlackJack 💎"
   puts "Your goal is to reach a score of exactly 21 by drawing cards."
   puts "If you go over 21, you lose!"
